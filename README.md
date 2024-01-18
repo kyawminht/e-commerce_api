@@ -1,91 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
+Your Project API Documentation
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Project API Documentation</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
+Authentication is performed using JWT (JSON Web Token).
 
-        h2 {
-            color: #333;
-        }
+## Register
+```http
+POST /auth/register
+Request
 
-        pre {
-            background-color: #f4f4f4;
-            padding: 10px;
-            border-radius: 5px;
-            overflow-x: auto;
-        }
-    </style>
-</head>
+Body Parameters:
+name (string, required): User's name.
+email (string, required): User's email.
+password (string, required): User's password.
+Response
 
-<body>
+Successful registration:
+Status Code: 201
+Body: User details along with a JWT token.
+<!-- Repeat similar HTML structure for other sections -->
+Brands
+List All Brands
+http
+Copy code
+GET /brands
+Request
 
-    <h2>Authentication</h2>
-    <p>Authentication is performed using JWT (JSON Web Token).</p>
+Headers:
+Authorization (string, required): Bearer token with admin privileges.
+Response
 
-    <h3>Register</h3>
-    <pre>
-        <code>
-            POST /auth/register
-        </code>
-    </pre>
-    <h4>Request</h4>
-    <p>Body Parameters:</p>
-    <ul>
-        <li><code>name</code> (string, required): User's name.</li>
-        <li><code>email</code> (string, required): User's email.</li>
-        <li><code>password</code> (string, required): User's password.</li>
-    </ul>
-    <h4>Response</h4>
-    <p>Successful registration:</p>
-    <ul>
-        <li>Status Code: 201</li>
-        <li>Body: User details along with a JWT token.</li>
-    </ul>
+List of brands.
 
-    <!-- Repeat similar HTML structure for other sections -->
+Categories
 
-    <h2>Brands</h2>
+Locations
+List All Locations
+http
+Copy code
+GET /locations
+Request
 
-    <h3>List All Brands</h3>
-    <pre>
-        <code>
-            GET /brands
-        </code>
-    </pre>
-    <h4>Request</h4>
-    <p>Headers:</p>
-    <ul>
-        <li><code>Authorization</code> (string, required): Bearer token with admin privileges.</li>
-    </ul>
-    <h4>Response</h4>
-    <p>List of brands.</p>
+Headers:
+Authorization (string, required): Bearer token.
+Response
 
-    <!-- Repeat similar HTML structure for other sections -->
+List of locations.
 
-    <h2>Categories</h2>
+Products
 
-    <!-- Repeat similar HTML structure for Categories -->
-
-    <h2>Locations</h2>
-
-    <!-- Repeat similar HTML structure for Locations -->
-
-    <h2>Products</h2>
-
-    <!-- Repeat similar HTML structure for Products -->
-
-    <h2>Orders</h2>
-
-    <!-- Repeat similar HTML structure for Orders -->
-
-</body>
-
-</html>
+Orders
